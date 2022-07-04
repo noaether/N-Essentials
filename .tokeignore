@@ -1,0 +1,9 @@
+exportToHTML/
+.idea/
+target/
+
+*.xml
+*.iml
+*.md
+LICENSE
+.gitignore
