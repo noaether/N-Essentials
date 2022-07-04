@@ -2,6 +2,7 @@ package noadev.nessentials.Commands.Homes;
 
 import noadev.nessentials.Handlers.ConfigHandler;
 import noadev.nessentials.Handlers.HomeHandler;
+import noadev.nessentials.Handlers.LogHandler;
 import noadev.nessentials.Handlers.MessageHandler;
 import noadev.nessentials.PluginMain;
 import org.bukkit.Bukkit;

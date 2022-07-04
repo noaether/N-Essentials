@@ -2,7 +2,6 @@ package noadev.nessentials.Handlers;
 
 import noadev.nessentials.PluginMain;
 
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class MessageHandler {
