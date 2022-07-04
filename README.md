@@ -1,4 +1,6 @@
 # N-Essentials
+![Latest Release](https://img.shields.io/github/v/release/thenoadev/n-essentials) \
+![Lines of code](https://img.shields.io/tokei/lines/github/thenoadev/n-essentials) \
 # Table of Contents
 1. [Introduction](#Introduction)
 2. [Installation](#Installation)
