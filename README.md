@@ -1,54 +1,68 @@
 # N-Essentials
+
 ![Latest Release](https://img.shields.io/github/v/release/thenoadev/n-essentials) \
 ![Lines of code](https://img.shields.io/tokei/lines/github/thenoadev/n-essentials) \
 ![Commits](https://img.shields.io/github/commit-activity/m/thenoadev/n-essentials)
-# Table of Contents
-1. [Introduction](#Introduction)
-2. [Installation](#Installation)
-3. [Commands](#Commands)
-4. [Modules](#Modules)
-   1. [Gamemodes](#Gamemodes)
-   2. [Homes](#Homes)
-   3. [Kits](#Kits)
-   4. [Moderation](#Moderation)
-   5. [Misc](#Misc)
-5. [Permissions](#Permissions)
-    1. [Gamemodes](#Gamemodes)
-    2. [Homes](#Homes)
-    3. [Kits](#Kits)
-    4. [Moderation](#Moderation)
-    5. [Misc](#Misc)
-6. [Changelog](#Changelog)
-7. [Contributors](#Contributors)
-8. [Footnotes](#Footnotes)
+
+## Table of contents
+
+- [N-Essentials](#n-essentials)
+  - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Installation](#installation)
+  - [Modules](#modules)
+    - [Gamemodes](#gamemodes)
+    - [Homes](#homes)
+    - [Kits](#kits)
+    - [Moderation](#moderation)
+    - [Misc](#misc)
+  - [Permissions](#permissions)
+    - [Gamemodes](#gamemodes-1)
+    - [Homes](#homes-1)
+    - [Kits](#kits-1)
+    - [Moderation](#moderation-1)
+  - [Changelog](#changelog)
+  - [Contributors](#contributors)
+  - [Footnotes](#footnotes)
 
 ## Introduction
+
 N-Essentials is a simple alternative to EssentialsX, useful for small servers that might only need some important functions.
 
 ## Installation
+
 - Download the latest release from the github repository
 - Download the modules you want to use
 - Place the files in the plugins directory of your minecraft server
 - Enjoy !
 - You can also use the [N-Essentials-Bundle]() to get everything in one package
+
 ## Modules
-### Gamemodes 
+
+### Gamemodes
+
 A simple gamemode module that allows you to set your gamemode or the gamemode of a player, with `/gm` commands
 
 ### Homes
+
 A home module that allows you to set named homes, teleport back to them, get directions to them and more
 
 ### Kits
+
 A kit module, useful for small minigame servers that don't need something hard to setup.
 
 ### Moderation
+
 A moderation module that allows you to ban, kick, mute, unmute, warn, unwarn, and more.
 
 ### Misc
+
 More fun commands to play with that couldnt fit into other modules.
 
 ## Permissions
+
 ### Gamemodes
+
 | Command                    | Permission Required (Self)     | Permission Required (Other) | Self is default? |
 |:---------------------------|:-------------------------------|:----------------------------|:----------------:|
 | n-essentials:gma [player]  | nessentials.gamemode.self.gma  | nessentials.gamemode.other  |        ✅         |
@@ -57,11 +71,12 @@ More fun commands to play with that couldnt fit into other modules.
 | n-essentials:gmsp [player] | nessentials.gamemode.self.gmsp | nessentials.gamemode.other  |        ✅         |
 
 ### Homes
+
 | Command                                              | Permission Required (Self)     | Permission Required (Other)    | Self is default? |
 |:-----------------------------------------------------|:-------------------------------|:-------------------------------|:----------------:|
-| n-essentials:sethome [player] <name> [x,y,z] [world] | nessentials.homes.self.sethome | nessentials.gamemode.setother  |        ✅         |
-| n-essentials:home [player] <name>                    | nessentials.homes.self.home    | nessentials.gamemode.homeother |        ✅         |
-| n-essentials:delhome [player] <name>                 | nessentials.homes.self.delhome | nessentials.gamemode.delother  |        ✅         |
+| n-essentials:sethome [player] \<name> [x,y,z] [world] | nessentials.homes.self.sethome | nessentials.gamemode.setother  |        ✅         |
+| n-essentials:home [player] \<name>                    | nessentials.homes.self.home    | nessentials.gamemode.homeother |        ✅         |
+| n-essentials:delhome [player] \<name>                 | nessentials.homes.self.delhome | nessentials.gamemode.delother  |        ✅         |
 | n-essentials:homes [player]                          | nessentials.homes.self.list    | nessentials.gamemode.listother |        ✅         |
 | Bypass the maximum number of houses                  | nessentials.homes.bypasslimit  | ❌                              |        ❌         |
 
@@ -70,6 +85,7 @@ More fun commands to play with that couldnt fit into other modules.
 ### Moderation
 
 ## Changelog
+
 - [v1.0.0]() - Initial release
 - [v1.1.0]() - Added `/gm_` commands
 - [v1.1.2]() - Fixed `/gm_` permission issues
@@ -83,7 +99,9 @@ More fun commands to play with that couldnt fit into other modules.
 - [v1.4.1]() - Full plugin refactor, added changelog, contributors, footnotes, and more
 
 ## Contributors
+
 Want to see your name here ? Open a pull request or an issue !
 
 ## Footnotes
+
 :)
