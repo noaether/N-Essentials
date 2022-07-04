@@ -1,7 +1,7 @@
 # N-Essentials
 
-![Latest Release](https://img.shields.io/github/v/release/thenoadev/n-essentials) \
-![Lines of code](https://img.shields.io/tokei/lines/github/thenoadev/n-essentials) \
+![Latest Release](https://img.shields.io/github/v/release/thenoadev/n-essentials)
+![Lines of code](https://img.shields.io/tokei/lines/github/thenoadev/n-essentials)
 ![Commits](https://img.shields.io/github/commit-activity/m/thenoadev/n-essentials)
 
 ## Table of contents
@@ -23,7 +23,6 @@
     - [Moderation](#moderation-1)
   - [Changelog](#changelog)
   - [Contributors](#contributors)
-  - [Footnotes](#footnotes)
 
 ## Introduction
 
@@ -72,13 +71,13 @@ More fun commands to play with that couldnt fit into other modules.
 
 ### Homes
 
-| Command                                              | Permission Required (Self)     | Permission Required (Other)    | Self is default? |
-|:-----------------------------------------------------|:-------------------------------|:-------------------------------|:----------------:|
+| Command                                               | Permission Required (Self)     | Permission Required (Other)    | Self is default? |
+|:------------------------------------------------------|:-------------------------------|:-------------------------------|:----------------:|
 | n-essentials:sethome [player] \<name> [x,y,z] [world] | nessentials.homes.self.sethome | nessentials.gamemode.setother  |        ✅         |
 | n-essentials:home [player] \<name>                    | nessentials.homes.self.home    | nessentials.gamemode.homeother |        ✅         |
 | n-essentials:delhome [player] \<name>                 | nessentials.homes.self.delhome | nessentials.gamemode.delother  |        ✅         |
-| n-essentials:homes [player]                          | nessentials.homes.self.list    | nessentials.gamemode.listother |        ✅         |
-| Bypass the maximum number of houses                  | nessentials.homes.bypasslimit  | ❌                              |        ❌         |
+| n-essentials:homes [player]                           | nessentials.homes.self.list    | nessentials.gamemode.listother |        ✅         |
+| Bypass the maximum number of houses                   | nessentials.homes.bypasslimit  | ❌                             |        ❌         |
 
 ### Kits
 
@@ -101,7 +100,3 @@ More fun commands to play with that couldnt fit into other modules.
 ## Contributors
 
 Want to see your name here ? Open a pull request or an issue !
-
-## Footnotes
-
-:)
