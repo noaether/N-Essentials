@@ -1,0 +1,75 @@
+name: N-Essentials
+version: 1.4.2-BETA-4
+author: NoaDev
+website: noadev.me
+main: noadev.nessentials.PluginMain
+prefix: N-Essentials
+api-version: 1.13
+commands:
+   gmc:
+      aliases: [gmcreative]
+      description: Change your gamemode or someone's gamemode to creative
+      permission: nessentials.gamemode.self.gmc
+      permission-message: "perm : nessentials.gamemode.self.gmc"
+   gms:
+      aliases: [gmsurvival]
+      description: Change your gamemode or someone's gamemode to survival
+      permission: nessentials.gamemode.self.gms
+      permission-message: "perm : nessentials.gamemode.self.gms"
+   gmsp:
+      aliases: [gmspectator]
+      description: Change your gamemode or someone's gamemode to spectator
+      permission: nessentials.gamemode.self.gmsp
+      permission-message: "perm : nessentials.gamemode.self.gmsp"
+   gma:
+      aliases: [gmadventure]
+      description: Change your gamemode or someone's gamemode to adventure
+      permission: nessentials.gamemode.self.gma
+      permission-message: "perm : nessentials.gamemode.self.gma"
+
+   sethome:
+      description: Set a home
+      permission: nessentials.homes.self.sethome
+      permission-message: "perm : nessentials.homes.self.sethome"
+   delhome:
+      description: Delete a home
+      permission: nessentials.homes.self.delhome
+      permission-message: "perm : nessentials.homes.self.delhome"
+   home:
+      aliases: [gohome, tphome]
+      description: Teleport to a home
+      permission: nessentials.homes.self.home
+      permission-message: "perm : nessentials.homes.self.home"
+
+permissions:
+   # GAMEMODES
+   nessentials.gamemode.other:
+      description: "Change someone's gamemode"
+   nessentials.gamemode.self.gmc:
+      description: "Change your gamemode to creative"
+   nessentials.gamemode.self.gms:
+      description: "Change your gamemode to survival"
+   nessentials.gamemode.self.gmsp:
+      description: "Change your gamemode to spectator"
+   nessentials.gamemode.self.gma:
+      description: "Change your gamemode to adventure"
+
+   # HOMES
+   nessentials.homes.setother:
+      description: Allows you to set homes for other players
+   nessentials.homes.delother:
+      description: Allows you to delete homes for other players
+   nessentials.homes.homeother:
+      description: Allows you to teleport to homes for other players
+
+   nessentials.homes.bypassLimit:
+      description: Allows you to bypass the home limit
+
+   nessentials.homes.self.sethome:
+      description: "Set a home"
+   nessentials.homes.self.delhome:
+      description: "Delete a home"
+   nessentials.homes.self.home:
+      description: "Teleport to a home"
+
+

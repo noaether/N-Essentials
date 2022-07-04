@@ -1,0 +1,33 @@
+config:
+  homeslimit: 10 # Put -1 to disable. Bypass this with nessentials.homes.bypassLimit
+
+# TODO : Add colors to messages
+messages:
+  error:
+    args: "You should provide arguments for this command. §4%usage%§r"
+    noperm: "You don't have permission to use this command."
+    doesntexist: "The §4%error%§r you provided does not exist."
+    noconsole: "You can't use this command from the console."
+    max: "You have reached the maximum amount of §4%error%§r you can have."
+
+  gamemode:
+    other: "Changed %player%'s gamemode to %gamemode%"
+    self: "You changed your gamemode to %gamemode%"
+
+  homes:
+    setother: "Set %player%'s home to %home%, at %x% %y% %z% in %world%"
+    setself: "Set your home to %home%, at %x% %y% %z% in %world%"
+    delself: "Deleted your home %home%"
+    delother: "Deleted %player%'s home %home%"
+    tphome: "You are now at your home %home%, at %x% %y% %z% in %world%"
+
+dbscheme:
+  homes:
+    NGU_Pocoyo:
+      number: 1
+      bed:
+        x: 0
+        y: 0
+        z: 0
+        world: world
+db:

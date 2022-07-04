@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>DelHome.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d55fde; font-style: italic;}
+.s1 { color: #bbbbbb;}
+.s2 { color: #d19a66;}
+.s3 { color: #89ca78;}
+.s4 { color: #5c6370; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#282c34">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+DelHome.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">noadev.nessentials.Commands.Homes;</span>
+
+<span class="s0">import </span><span class="s1">noadev.nessentials.Handlers.ConfigHandler;</span>
+<span class="s0">import </span><span class="s1">noadev.nessentials.Handlers.MessageHandler;</span>
+<span class="s0">import </span><span class="s1">noadev.nessentials.PluginMain;</span>
+<span class="s0">import </span><span class="s1">org.bukkit.Bukkit;</span>
+<span class="s0">import </span><span class="s1">org.bukkit.command.Command;</span>
+<span class="s0">import </span><span class="s1">org.bukkit.command.CommandExecutor;</span>
+<span class="s0">import </span><span class="s1">org.bukkit.command.CommandSender;</span>
+<span class="s0">import </span><span class="s1">org.bukkit.command.ConsoleCommandSender;</span>
+<span class="s0">import </span><span class="s1">org.bukkit.entity.Player;</span>
+
+<span class="s0">public class </span><span class="s1">DelHome </span><span class="s0">implements </span><span class="s1">CommandExecutor {</span>
+    <span class="s0">private final </span><span class="s1">PluginMain plugin;</span>
+
+    <span class="s0">public </span><span class="s1">DelHome(PluginMain plugin) {</span>
+        <span class="s0">this</span><span class="s1">.plugin = plugin;</span>
+    <span class="s1">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public boolean </span><span class="s1">onCommand(CommandSender sender, Command command, String label, String[] args) {</span>
+        <span class="s0">if </span><span class="s1">(sender </span><span class="s0">instanceof </span><span class="s1">ConsoleCommandSender) {</span>
+            <span class="s0">if </span><span class="s1">(args.length != </span><span class="s2">2</span><span class="s1">) {</span>
+                <span class="s1">MessageHandler.Error.sendArgs(</span><span class="s3">&quot;/delhome &lt;player&gt; &lt;home&gt;&quot;</span><span class="s1">);</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s1">Player homePlayer = Bukkit.getPlayer(args[</span><span class="s2">0</span><span class="s1">]);</span>
+                <span class="s0">if </span><span class="s1">(homePlayer == </span><span class="s0">null</span><span class="s1">) {</span>
+                    <span class="s1">MessageHandler.Error.sendDoesntExist(</span><span class="s3">&quot;player&quot;</span><span class="s1">);</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">String homeName = args[</span><span class="s2">1</span><span class="s1">];</span>
+                    <span class="s0">if</span><span class="s1">(ConfigHandler.messageConfig.getString(</span><span class="s3">&quot;db.homes.&quot; </span><span class="s1">+ homePlayer.getUniqueId() + </span><span class="s3">&quot;.&quot; </span><span class="s1">+ homeName) != </span><span class="s0">null</span><span class="s1">) {</span>
+                        <span class="s1">ConfigHandler.databaseConfig.set(</span><span class="s3">&quot;db.homes.&quot; </span><span class="s1">+ homePlayer.getUniqueId() + </span><span class="s3">&quot;.&quot; </span><span class="s1">+ homeName, </span><span class="s0">null</span><span class="s1">);</span>
+                        <span class="s1">ConfigHandler.databaseConfig.save();</span>
+                        <span class="s1">MessageHandler.Console.sendMessage(</span>
+                            <span class="s1">ConfigHandler.messageConfig.getString(</span><span class="s3">&quot;messages.console.delhome&quot;</span><span class="s1">)</span>
+                                <span class="s1">.replace(</span><span class="s3">&quot;%player%&quot;</span><span class="s1">, homePlayer.getName())</span>
+                                <span class="s1">.replace(</span><span class="s3">&quot;%home%&quot;</span><span class="s1">, homeName)</span>
+                        <span class="s1">);</span>
+                    <span class="s1">}</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s0">if</span><span class="s1">(sender </span><span class="s0">instanceof </span><span class="s1">Player) {</span>
+            <span class="s4">// Delete home as player</span>
+            <span class="s0">boolean </span><span class="s1">hasPermission = sender.hasPermission(</span><span class="s3">&quot;nessentials.homes.delother&quot;</span><span class="s1">);</span>
+            <span class="s0">if</span><span class="s1">(args.length == </span><span class="s2">2 </span><span class="s1">&amp;&amp; hasPermission) {</span>
+                <span class="s4">// Delete player home as admin</span>
+                <span class="s1">Player homePlayer = Bukkit.getPlayer(args[</span><span class="s2">0</span><span class="s1">]);</span>
+                <span class="s0">if </span><span class="s1">(homePlayer == </span><span class="s0">null</span><span class="s1">) {</span>
+                    <span class="s1">MessageHandler.Error.sendDoesntExist(</span><span class="s3">&quot;player&quot;</span><span class="s1">);</span>
+                <span class="s1">}</span>
+
+                <span class="s1">String homeName = args[</span><span class="s2">1</span><span class="s1">];</span>
+                <span class="s0">if</span><span class="s1">(ConfigHandler.messageConfig.getString(</span><span class="s3">&quot;db.homes.&quot; </span><span class="s1">+ homePlayer.getUniqueId() + </span><span class="s3">&quot;.&quot; </span><span class="s1">+ homeName) != </span><span class="s0">null</span><span class="s1">) {</span>
+                    <span class="s1">ConfigHandler.databaseConfig.set(</span><span class="s3">&quot;db.homes.&quot; </span><span class="s1">+ homePlayer.getUniqueId() + </span><span class="s3">&quot;.&quot; </span><span class="s1">+ homeName, </span><span class="s0">null</span><span class="s1">);</span>
+                    <span class="s1">ConfigHandler.databaseConfig.save();</span>
+                    <span class="s1">MessageHandler.InGame.sendMessage(</span>
+                            <span class="s1">(Player) sender,</span>
+                        <span class="s1">ConfigHandler.messageConfig.getString(</span><span class="s3">&quot;messages.player.delhome&quot;</span><span class="s1">)</span>
+                            <span class="s1">.replace(</span><span class="s3">&quot;%player%&quot;</span><span class="s1">, homePlayer.getName())</span>
+                            <span class="s1">.replace(</span><span class="s3">&quot;%home%&quot;</span><span class="s1">, homeName)</span>
+                    <span class="s1">);</span>
+                <span class="s1">}</span>
+            <span class="s1">} </span><span class="s0">else if</span><span class="s1">(args.length == </span><span class="s2">1</span><span class="s1">) {</span>
+                <span class="s4">// Delete player home as player</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s4">// Invalid arguments</span>
+                <span class="s1">MessageHandler.Error.sendArgs((Player) sender, </span><span class="s3">&quot;/delhome &lt;home&gt;&quot;</span><span class="s1">);</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s0">return true</span><span class="s1">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
