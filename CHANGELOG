@@ -1,0 +1,21 @@
+### CHANGELOG
+
+- [v1.0.0]() - Initial release
+- [v1.1.0]() - Added `/gm_` commands
+- [v1.1.2]() - Fixed `/gm_` permission issues
+- [v1.2.0]() - Added home system
+- [v1.2.1]() - Added `/home` `/sethome` `/delhome` commands
+- [v1.2.2]() - Added `/home` `/sethome` `/delhome` permissions
+- [v1.3.1]() - Separated systems into different handlers and modules
+- [v1.3.2]() - Added configuration options for modules
+- [v1.3.3]() - Added log, homes and config modules
+- [v1.3.4]() - Added message handler using the config handler
+- [v1.4.1]() - Full plugin refactor, added changelog, contributors, footnotes, and more
+- [v1.4.2]() - Added permissions handler
+
+### PLANNING
+
+- [v1.4.5]() - Redo the `/home` command using the new Handlers
+- [v1.4.4]() - Redo the `/delhome` command using the new Handlers
+- [v1.4.5]() -  Redo the `/sethome` command using the new Handlers
+- [v1.4.6]() - Add `/homes` command to list all homes

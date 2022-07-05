@@ -21,7 +21,6 @@
     - [Homes](#homes-1)
     - [Kits](#kits-1)
     - [Moderation](#moderation-1)
-  - [Changelog](#changelog)
   - [Contributors](#contributors)
 
 ## Introduction
@@ -71,31 +70,17 @@ More fun commands to play with that couldnt fit into other modules.
 
 ### Homes
 
-| Command                                               | Permission Required (Self)     | Permission Required (Other)    | Self is default? |
-|:------------------------------------------------------|:-------------------------------|:-------------------------------|:----------------:|
-| n-essentials:sethome [player] \<name> [x,y,z] [world] | nessentials.homes.self.sethome | nessentials.gamemode.setother  |        ✅         |
-| n-essentials:home [player] \<name>                    | nessentials.homes.self.home    | nessentials.gamemode.homeother |        ✅         |
-| n-essentials:delhome [player] \<name>                 | nessentials.homes.self.delhome | nessentials.gamemode.delother  |        ✅         |
-| n-essentials:homes [player]                           | nessentials.homes.self.list    | nessentials.gamemode.listother |        ✅         |
-| Bypass the maximum number of houses                   | nessentials.homes.bypasslimit  | ❌                             |        ❌         |
+| Command                                               | Permission Required (Self)     | Permission Required (Other) | Self is default? |
+|:------------------------------------------------------|:-------------------------------|:----------------------------|:----------------:|
+| n-essentials:sethome [player] \<name> [x,y,z] [world] | nessentials.homes.self.sethome | nessentials.homes.setother  |        ✅         |
+| n-essentials:home [player] \<name>                    | nessentials.homes.self.home    | nessentials.homes.homeother |        ✅         |
+| n-essentials:delhome [player] \<name>                 | nessentials.homes.self.delhome | nessentials.homes.delother  |        ✅         |
+| n-essentials:homes [player]                           | nessentials.homes.self.list    | nessentials.homes.listother |        ✅         |
+| Bypass the maximum number of houses                   | nessentials.homes.bypasslimit  | ❌                          |        ❌         |
 
 ### Kits
 
 ### Moderation
-
-## Changelog
-
-- [v1.0.0]() - Initial release
-- [v1.1.0]() - Added `/gm_` commands
-- [v1.1.2]() - Fixed `/gm_` permission issues
-- [v1.2.0]() - Added home system
-- [v1.2.1]() - Added `/home` `/sethome` `/delhome` commands
-- [v1.2.2]() - Added `/home` `/sethome` `/delhome` permissions
-- [v1.3.1]() - Separated systems into different handlers and modules
-- [v1.3.2]() - Added configuration options for modules
-- [v1.3.3]() - Added log, homes and config modules
-- [v1.3.4]() - Added message handler using the config handler
-- [v1.4.1]() - Full plugin refactor, added changelog, contributors, footnotes, and more
 
 ## Contributors
 
