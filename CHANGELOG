@@ -15,7 +15,4 @@
 
 ### PLANNING
 
-- [v1.4.5]() - Redo the `/home` command using the new Handlers
-- [v1.4.4]() - Redo the `/delhome` command using the new Handlers
-- [v1.4.5]() -  Redo the `/sethome` command using the new Handlers
-- [v1.4.6]() - Add `/homes` command to list all homes
+- [v1.4.3]() - Refactor home system using new permission handler
