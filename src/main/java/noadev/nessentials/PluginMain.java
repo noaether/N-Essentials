@@ -46,6 +46,8 @@ public class PluginMain extends JavaPlugin implements Listener {
 		getInstance().getLogger().info("Loaded LogHandler");
 		new noadev.nessentials.Handlers.MessageHandler(this);
 		getInstance().getLogger().info("Loaded MessageHandler");
+		new noadev.nessentials.Handlers.PermissionHandler(this);
+		getInstance().getLogger().info("Loaded PermissionHandler");
 
 	}
 

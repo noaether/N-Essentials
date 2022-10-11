@@ -53,8 +53,8 @@ public class SetHome implements CommandExecutor {
       if (args.length == 2) {
         int maxHomes = ConfigHandler.messageConfig.getInt("config.homeslimit");
         int homes = ConfigHandler.databaseConfig.getInt("db.homes." + String.valueOf(p_.getUniqueId()) + ".number");
-        boolean hp_ = PermissionHandler.Read.hasPerm(p_, "nessentials.homes.bypassLimit");
-        if (homes < maxHomes || hp_) {
+        boolean bypassPermission = PermissionHandler.Read.hasPerm(p_, "nessentials.homes.bypassLimit");
+        if (homes < maxHomes || bypassPermission) {
           String coordsX = String.valueOf(p_.getLocation().getBlockX());
           String coordsY = String.valueOf(p_.getLocation().getBlockY());
           String coordsZ = String.valueOf(p_.getLocation().getBlockZ());
